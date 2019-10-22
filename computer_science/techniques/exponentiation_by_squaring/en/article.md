@@ -74,7 +74,7 @@ x^e(i+1) = x^ei*x^ei
 
 **In a simple English**: to get `x^n`, it is sufficient to multiply all `x^(2^i)`  among themselves for which the bit value under `i` is equal to `1` (`i` is `i`'s digit of the binary representation of n). 
 
-If we do this carefully and store each `x^(2^i)` value, each successive values will contain previous. Thus, we could significantly decrease the amount of needed operations. Using this method, we can perform `x^117` with the cost of eleven multiplication operations instead of 117 expected.
+To calculate each next `x^(2^i)` value we have to keep in memory only the previous value: `x^(2^i) = x^(2^(i-1)) * x^(2^(i-1))`. Thus, we could significantly decrease the amount of needed operations. Using this method, we can perform `x^117` with the cost of eleven multiplication operations instead of 117 expected.
 
 Let's gaze at the [code](https://github.com/YaroslavHavrylovych/dsa/blob/development/algorithms/math/exponentiation_by_squaring/java/Exponentiation.java) once again:
 
