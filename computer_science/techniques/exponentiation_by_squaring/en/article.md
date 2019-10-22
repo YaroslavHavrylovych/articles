@@ -1,5 +1,7 @@
 # Exponentiation by squaring
 
+![logo](assets/xn.png)
+
 While solving one of the tasks at [InterviewBit](https://www.interviewbit.com) (I don't remember the exercise itself),
 I saw a magical (and unknown to me) exponentiation method that worked in logarithmic time. 
 When I threw away the magical part, the method was very exquisite and clear.
