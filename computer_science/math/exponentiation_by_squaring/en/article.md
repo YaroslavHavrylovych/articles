@@ -3,7 +3,8 @@
 ![logo](assets/xn.png)
 
 While solving one of the tasks at [InterviewBit](https://www.interviewbit.com) (I don't remember the exercise itself),
-I saw a magical (and unknown to me) exponentiation method that worked in logarithmic time. 
+I saw a magical (and unknown to me) exponentiation method, which worked not in the way I expected
+and  used arithmetic operations amount, which was proportional to logarithmic. 
 When I threw away the magical part, the method was very exquisite and clear.
 
 Here is the [code itself](https://github.com/YaroslavHavrylovych/dsa/blob/development/algorithms/math/exponentiation_by_squaring/java/Exponentiation.java). If everything is clear to you, then you can skip further reading:
@@ -92,6 +93,12 @@ long pow(long x, long n) {
 }
 ```
 
+PS
+
 Of course, we could use any other base than 2,
 but the convenience of binary is that numbers, in most programming languages,
 have a free binary form and convenient binary API.
+
+PPS
+
+If the number is big, then the multiplication operation will cost a lot of time and significantly increate the general [algorithm time](https://en.wikipedia.org/wiki/Multiplication_algorithm#Fast_multiplication_algorithms_for_large_inputs).  
