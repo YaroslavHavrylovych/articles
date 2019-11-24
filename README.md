@@ -4,6 +4,8 @@
 
 *Read in [Українська](README-UK.md)*
 
+Most of these articles you can read on [medium](https://medium.com/@yaroslav.havrylovych).
+
 Own articles or translations of popular articles about computer science,
 or software development. These are not for newbies. 
 However, basic programming knowledge 
