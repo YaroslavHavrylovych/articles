@@ -23,14 +23,20 @@ long pow(long val, long exp) {
 
 **The concrete problem's statement**: exponentiate `x` to `n`, where x=[1,2,3,...], n = [0,1,2,3,....]
 
-Let's warm up the memory a little bit and start with the standard [linear time](https://en.wikipedia.org/wiki/Time_complexity#Linear_time) exponentiation procedure which follows the [definition](https://en.wikipedia.org/wiki/Exponentiation). Exempli gratia:
+If someone asked me to exponentiate `x`, I would use the naive algorithm based on the 
+[definition](https://en.wikipedia.org/wiki/Exponentiation), and this algorithm uses [
+linear time](https://en.wikipedia.org/wiki/Time_complexity#Linear_time) . Exempli gratia:
 
 ```
 x^n=x*x*x*....*x (n разів)
 ```
 
-We want to reduce the multiplications amount `x*x` because this is a continuously repeated operation.
-To achieve this, we use an essential exponentiation's property:
+Take your time and investigate this formula. Think about how we can reduce the number of multiplication operations.
+One minute after. You can see that we use too many `x*x`. I  introduce you to `y=x*x`.
+Now we can write the `x^n=y*y*...*y*x` or `x^n=y*y*...*y` depends on `n` is even or not.
+Thus we reduce the multiplications amount in twice. Using the same approach we can replace `y*y` and so on.
+
+Now how we can achieve this? I suggest to use an essential exponentiation's property:
 
 ```mathematica
 x^(a+b)=(x^a)*(x^b).
